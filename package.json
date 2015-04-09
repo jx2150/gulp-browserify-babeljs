@@ -2,7 +2,7 @@
   "name": "dots-and-boxes",
   "version": "1.0.0",
   "description": "Dots and Boxes in HTML, CSS and JavaScript (ES6)",
-  "main": "dist/app.js",
+  "main": "server",
   "scripts": {
     "test": "mocha --compilers js:babel/register"
   },
