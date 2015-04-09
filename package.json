@@ -1,0 +1,23 @@
+{
+  "name": "dots-and-boxes",
+  "version": "1.0.0",
+  "description": "Dots and Boxes in HTML, CSS and JavaScript (ES6)",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register"
+  },
+  "author": "hello@jbi.sh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.0.12",
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.7",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "connect": "^3.3.5",
+    "serve-static": "^1.9.2"
+  }
+}
