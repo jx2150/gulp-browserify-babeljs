@@ -6,6 +6,7 @@ https://en.wikipedia.org/wiki/Dots_and_Boxes
 
 ##To play:
 `npm install`
+
 `npm start`
 
 ##To develop:
