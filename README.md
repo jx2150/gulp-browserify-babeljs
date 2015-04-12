@@ -9,6 +9,8 @@ https://en.wikipedia.org/wiki/Dots_and_Boxes
 
 `npm start`
 
+Open http://localhost:8080/
+
 ##To develop:
 `gulp watch`
 
