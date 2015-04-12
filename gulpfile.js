@@ -22,5 +22,5 @@ gulp.task("default", function () {
 });
 
 gulp.task("watch", function(){
-    gulp.watch('**/*.js', ['default']);
+    gulp.watch(['app.js', './imports/*.js'], ['default']);
 });

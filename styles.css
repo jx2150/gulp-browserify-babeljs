@@ -1,0 +1,178 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#game {
+	width: 400px;
+	height: 400px;
+	/*background-color: lightGray;*/
+	margin: 0 auto;
+	position: relative;
+}
+
+#dots-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	align-items: flex-start;
+}
+
+#boxes-container {
+	position: relative;
+	left: 2.5px;
+	top: 2.5px;
+}
+
+#turns-container {
+	margin: 1em auto;
+	text-align: center;
+	/*background: lightblue;*/
+	padding: 1em;
+	border-radius: 1em;
+	width: 200px;
+	text-transform: uppercase;
+}
+
+#turns-container .red {
+	color: red;
+	font-weight: bold;
+}
+
+#turns-container .blue {
+	color: blue;
+	font-weight: bold
+}
+
+#turns-container.end-game .in-game-message, #turns-container .end-game-message {
+	display: none;
+}
+
+#turns-container.end-game .end-game-message {
+	display: block;
+}
+
+.dot {
+	color: white;
+	background-color: black;
+	border-radius: 1em;
+	width: 20px;
+	height: 20px;
+	background-color: darkslategray;
+	border-radius: 1em;
+	width: 20px;
+	height: 20px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*flex: 1;*/
+	/*flex-basis: 0;*/
+	margin: 0 18% 75px 0;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.dot:hover {
+	background: green;
+}
+
+.dot:nth-child(5n) {
+	margin-right: 0;
+}
+
+.dot:nth-last-child(-n+5) {
+	margin-bottom: 0;
+}
+
+.dot.selected {
+	background: green;
+}
+
+.dot.viable {
+	background: blue;
+}
+
+.box {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	/*border: 5px solid black;*/
+	/*visibility: hidden;*/
+}
+
+.box .line {
+	position: absolute;
+	background: black;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.box .type-horizontal-top {
+	top: -2.5px;
+	width: 100%;
+	height: 10px;
+}
+.box .type-horizontal-bottom {
+	bottom: -2.5px;
+	top: auto;
+	width: 100%;
+	height: 10px;
+}
+.box .type-vertical-left {
+	left: -2.5px;
+	width: 10px;
+	height: 100%;
+}
+.box .type-vertical-right {
+	right: -2.5px;
+	left: auto;
+	width: 10px;
+	height: 100%;
+}
+
+.box.red {
+	background: rgba(255, 0, 0, .6);
+}
+.box.red:after {
+	content: 'R';
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+	width: 100%;
+	display: block;
+}
+
+.box.blue {
+	background: rgba(0, 0, 255, .6);
+}
+.box.blue:after {
+	content: 'B';
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+	width: 100%;
+	display: block;
+}
+
+.line.selected-red {
+	background: red;
+}
+
+.line.selected-blue {
+	background: blue;
+}
+
+
+.box.closed {
+	visibility: visible;
+}
