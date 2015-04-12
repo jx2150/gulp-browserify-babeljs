@@ -327,7 +327,7 @@ class Game{
 	 */
 	setEventListeners() {
 		// $(this.container).on('click', '.dot', event => this.handleDotClick(event, this));
-		$(this.container).on('click', '.line', event => this.handleLineClick(event, this));
+		$(this.container).on('click', '.line:not(.selected-red,.selected-blue)', event => this.handleLineClick(event, this));
 	}
 
 }

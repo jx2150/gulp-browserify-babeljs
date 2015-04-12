@@ -11,3 +11,6 @@ https://en.wikipedia.org/wiki/Dots_and_Boxes
 
 ##To develop:
 `gulp watch`
+
+##To test:
+`npm test`
